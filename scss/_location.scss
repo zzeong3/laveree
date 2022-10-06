@@ -1,0 +1,10 @@
+.content.location {
+    .sub_visual {
+        p {
+            &::after {
+                background-image:url(../img/location.png);background-position:center -100px;
+            }
+        }
+    }
+    
+}

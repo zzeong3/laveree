@@ -1,14 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Libre+Caslon+Text&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  position: relative;
 }
 
 ul, ol, li {
@@ -27,7 +23,8 @@ a {
 
 #skipnavigation a {
   position: absolute;
-  top: -30px;
+  top: -99999px;
+  opacity: 0;
 }
 
 button {
@@ -40,9 +37,205 @@ em {
 }
 
 body {
+  position: relative;
   font-family: Libre Caslon Text;
   color: #000;
   letter-spacing: 1px;
+}
+
+#header_sub {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 58px;
+  padding: 0 50px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+#header_sub h1 {
+  float: left;
+  width: 126px;
+  height: 58px;
+}
+#header_sub h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#header_sub nav #gnb {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+}
+#header_sub nav #gnb li {
+  margin-right: 50px;
+}
+#header_sub nav #gnb li a {
+  display: block;
+  padding: 23px 0 16px;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  letter-spacing: 1px;
+}
+#header_sub .util {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header_sub .util li {
+  margin-left: 20px;
+}
+#header_sub .util li a {
+  display: block;
+  padding: 23px 0 16px;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+  letter-spacing: 1px;
+}
+#header_sub::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.content {
+  margin-top: 58px;
+}
+.content .sub_visual {
+  padding: 80px 0;
+  height: 490px;
+  width: 1180px;
+  margin: 0 auto;
+}
+.content .sub_visual h2 {
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 15px;
+}
+.content .sub_visual h2 .cursive {
+  font-size: 50px;
+  line-height: 45px;
+}
+.content .sub_visual h2 .cursive::after {
+  bottom: 25px;
+}
+.content .sub_visual p {
+  position: relative;
+  margin-top: 5px;
+  padding-right: 40px;
+  display: inline-block;
+  padding-top: 10px;
+  font-family: Poppin, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+}
+.content .sub_visual p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+.content .sub_visual p::after {
+  content: "";
+  position: absolute;
+  right: -500px;
+  top: 0;
+  width: 500px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #000;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+#footer_sub {
+  padding: 40px 50px;
+  background: #faf8f4;
+}
+#footer_sub .info_footer {
+  float: left;
+  width: 80%;
+}
+#footer_sub .info_footer address {
+  font-size: 11px;
+  line-height: 22px;
+  font-style: normal;
+}
+#footer_sub .info_footer .copyright {
+  margin-top: 120px;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+}
+#footer_sub .info_link {
+  float: right;
+  width: 20%;
+}
+#footer_sub .info_link .menu_footer {
+  float: left;
+}
+#footer_sub .info_link .menu_footer li + li {
+  margin-top: 4px;
+}
+#footer_sub .info_link .menu_footer li a {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: Poppins, sans-serif;
+  color: #000;
+}
+#footer_sub .info_link .list_sns {
+  float: right;
+  overflow: hidden;
+}
+#footer_sub .info_link .list_sns li {
+  float: left;
+  margin-left: 10px;
+}
+#footer_sub::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.content.community .sub_visual p::after {
+  background-image: url(../img/community.png);
+}
+
+.content.department .sub_visual p::after {
+  background-image: url(../img/department.png);
+  background-position: center -15px;
+}
+
+.content.gallery .sub_visual p::after {
+  background-image: url(../img/gallery.png);
+}
+
+.content.location .sub_visual p::after {
+  background-image: url(../img/location.png);
+  background-position: center -100px;
+}
+
+.content.youtube .sub_visual p::after {
+  background-image: url(../img/youtube.png);
 }
 
 #header {

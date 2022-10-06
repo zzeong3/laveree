@@ -1,0 +1,10 @@
+.content.gallery {
+    .sub_visual {
+        p {
+            &::after {
+                background-image:url(../img/gallery.png);
+            }
+        }
+    }
+    
+}

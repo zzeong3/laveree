@@ -1,0 +1,10 @@
+.content.youtube {
+    .sub_visual {
+        p {
+            &::after {
+                background-image:url(../img/youtube.png);
+            }
+        }
+    }
+    
+}

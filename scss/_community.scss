@@ -1,0 +1,10 @@
+.content.community {
+    .sub_visual {
+        p {
+            &::after {
+                background-image:url(../img/community.png);
+            }
+        }
+    }
+    
+}
