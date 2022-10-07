@@ -83,7 +83,8 @@
 
 //visual
 #visual {
-    overflow:hidden;height:100vh;margin-top:58px;
+    position:relative;overflow:hidden;height:100vh;
+    padding-top:58px; 
     .slider {
         height:100%;
         li {
@@ -92,7 +93,30 @@
                 width:100%;height:100%;object-fit:cover;
             }
         }
-    }   
+    }
+    .paging {
+        position:absolute;left:50%;bottom:0;width:1180px;margin-left:-590px;display:flex;justify-content:flex-end;
+        .inner {
+            width:885px;
+            box-shadow:5px 5px 10px rgba(0,0,0,.4);
+            display:flex;justify-content:center;margin-left:-1px;
+            a {
+                display:flex;justify-content:center;align-items:center;position:relative;
+                width:295px;height:60px;background:#fff;
+                font-family:Poppins, sans-serif;
+                font-size:16px;text-align:center;color:#000;
+                &.on::before {
+                    content:"";
+                    position:absolute;left:0;right:0;top:0;height:2px;background:#000;
+                }
+                &::after {
+                    content:"";
+                    position:absolute;right:-1px;top:0;z-index:1;width:1px;height:100%;background:#d8d6d2;opacity:.4;
+                    
+                }
+            }
+        }
+    }
 }
 
 //brand
